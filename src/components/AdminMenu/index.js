@@ -9,7 +9,7 @@ export default function AdminMenu({ handleClickOpenEditPage }) {
         <ul className="dropdown_menu">
           <li className="dropdown_item-1">
             <Link onClick={handleClickOpenEditPage} to="/adminEditProfile">
-              Admin Panel
+              Edit Profile
             </Link>
           </li>
         </ul>

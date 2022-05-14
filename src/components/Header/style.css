@@ -1,10 +1,15 @@
+.flex_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .ibr_header_sides_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 90%;
   margin-left: 5%;
-  min-height: 93vh;
 }
 
 .ibr_right_side {
@@ -47,6 +52,15 @@
 
 .ibr_right_side_small_text {
   margin-top: 20px;
+}
+
+.ibr_animation_header_page {
+  margin-top: 30px !important;
+  height: 200px;
+  width: 250px;
+  z-index: 100;
+  margin-top: -50px !important;
+  margin-left: 450px;
 }
 
 /* 

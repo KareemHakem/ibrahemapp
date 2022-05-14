@@ -1,11 +1,12 @@
 import React from "react";
 import Typical from "react-typical";
 import Image from "../../assets/images/ibarhem.jpg";
+import { HomeArrowAnimation } from "../Animation";
 import "./style.css";
 
 export default function Header() {
   return (
-    <div className="app__bg">
+    <div className="flex_page">
       <div className="ibr_header_sides_container">
         <div className="ibr_left_side">
           <img src={Image} alt="ibr_image" />
@@ -33,11 +34,11 @@ export default function Header() {
                 wrapper="h4"
               />
             </div>
-            <div>
-              <p> </p>
-            </div>
           </div>
         </div>
+      </div>
+      <div className="ibr_animation_header_page">
+        <HomeArrowAnimation />
       </div>
     </div>
   );
