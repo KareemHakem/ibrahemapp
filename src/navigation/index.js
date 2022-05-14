@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "../commons/Navbar";
-import Home from "../pages/Home/index.js";
+import Navbar from "../components/Navbar";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import AdminEditProfile from "../pages/AdminEditProfile";
+import Profile from "../pages/Profile";
 
 export default function Navigation() {
   return (
@@ -9,6 +12,9 @@ export default function Navigation() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/photo" element={<Profile />} />
+        <Route path="/adminEditProfile" element={<AdminEditProfile />} />
       </Routes>
     </>
   );

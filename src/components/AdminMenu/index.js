@@ -1,9 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
-export default function AdminMenu() {
+export default function AdminMenu({ handleClickOpenEditPage }) {
   return (
-    <div>
-      <h1 style={{ color: "#fff" }}>AdminMenu</h1>
+    <div className=" menu_container">
+      <div className=" menu_container scale-up-center">
+        <ul className="dropdown_menu">
+          <li className="dropdown_item-1">
+            <Link onClick={handleClickOpenEditPage} to="/adminEditProfile">
+              Admin Panel
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

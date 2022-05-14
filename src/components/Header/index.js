@@ -21,16 +21,18 @@ export default function Header() {
               loop={Infinity}
               wrapper="h1"
             />
-            <Typical
-              steps={[
-                "Success is nothing more than a",
-                1000,
-                "Success is nothing more  than a few simple decisions practiced every day!",
-                800,
-              ]}
-              loop={Infinity}
-              wrapper="h4"
-            />
+            <div className="ibr_right_side_small_text">
+              <Typical
+                steps={[
+                  "Success is nothing more than a",
+                  1000,
+                  "Success is nothing more  than a few simple decisions practiced every day!",
+                  800,
+                ]}
+                loop={Infinity}
+                wrapper="h4"
+              />
+            </div>
             <div>
               <p> </p>
             </div>
