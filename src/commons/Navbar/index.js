@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavbarMenu from "../../components/NavbarMenu";
+import NavbarRightSide from "../../components/NavbarRightSide";
 import "./style.css";
 
 export default function Navbar() {
@@ -18,7 +19,7 @@ export default function Navbar() {
             PHOTO
           </Link>
         </div>
-        <NavbarMenu />
+        <NavbarRightSide />
       </div>
     </div>
   );
