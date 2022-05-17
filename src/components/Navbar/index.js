@@ -22,12 +22,17 @@ export default function Navbar() {
           <Link className="ibr_navbar_logo_link" to="/">
             STOKAR
           </Link>
-          <Link className="ibr_navbar_link" to="about">
-            ABOUT
-          </Link>
-          <Link className="ibr_navbar_link" to="photo">
-            PHOTO
-          </Link>
+          <div className="ibr_center_link_navbar">
+            <Link className="ibr_navbar_link_Portfolio" to="/">
+              Portfolio
+            </Link>
+            <Link className="ibr_navbar_link" to="about">
+              ABOUT
+            </Link>
+            <Link className="ibr_navbar_link" to="photo">
+              PHOTO
+            </Link>
+          </div>
         </div>
         <NavbarRightSide handleOpenMenu={handleToggle} />
       </div>

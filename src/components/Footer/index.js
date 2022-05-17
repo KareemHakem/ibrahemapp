@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Icons } from "../../assets/icons";
+import Logo from "../../assets/images/500logo.png";
+import Logo2 from "../../assets/images/shoterlogo.png";
+import Logo3 from "../../assets/images/pexels.png";
 import "./style.css";
 
 export default function Footer() {
@@ -11,19 +14,26 @@ export default function Footer() {
           className="ibr_footer_lift_side_container_link"
           href="https://www.instagram.com/ibrahimstokar/"
         >
-          <Icons.YouTubeIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <Icons.YouTubeIcon style={{ color: "#000", fontSize: 35 }} />
         </a>
         <a
           className="ibr_footer_lift_side_container_a"
           href="https://www.instagram.com/ibrahimstokar/"
         >
-          <Icons.InstagramIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <Icons.InstagramIcon style={{ color: "#000", fontSize: 35 }} />
         </a>
         <a
           className="ibr_footer_lift_side_container_a"
           href="https://www.facebook.com/ibrahimstokar6"
         >
-          <Icons.FacebookIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <Icons.FacebookIcon style={{ color: "#000", fontSize: 35 }} />
+        </a>
+
+        <a
+          className="ibr_footer_lift_side_container_a"
+          href="https://www.instagram.com/ibrahimstokar/"
+        >
+          <Icons.EmailIcon style={{ color: "#000", fontSize: 35 }} />
         </a>
       </div>
 
@@ -36,21 +46,22 @@ export default function Footer() {
       <div className="ibr_footer_right_side_container">
         <a
           className="ibr_footer_lift_side_container_a"
-          href="https://www.instagram.com/ibrahimstokar/"
+          href="https://500px.com/p/ibrahimstokar?view=photos"
         >
-          <Icons.EmailIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <img src={Logo} alt="logo" />
         </a>
         <a
           className="ibr_footer_lift_side_container_a"
-          href="https://www.instagram.com/ibrahimstokar/"
+          href="https://www.shutterstock.com/g/ibrahim+srokar?rid=269100424&utm_medium=email&utm_source=ctrbreferral-link"
         >
-          <Icons.InstagramIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <img src={Logo2} alt="logo" />
         </a>
+
         <a
-          className="ibr_footer_lift_side_container_a"
-          href="https://www.instagram.com/ibrahimstokar/"
+          className="ibr_footer_lift_side_container_a_pixel"
+          href="https://www.pexels.com/@ibrahim-srokar-997345/?onboarding=completed"
         >
-          <Icons.FacebookIcon style={{ color: "#ffff", fontSize: 35 }} />
+          <img src={Logo3} alt="logo" />
         </a>
       </div>
     </div>

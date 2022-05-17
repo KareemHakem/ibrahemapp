@@ -1,10 +1,14 @@
 import React from "react";
 import Typical from "react-typical";
-import Image from "../../assets/images/ibarhem.jpg";
+
 import { HomeArrowAnimation } from "../Animation";
+import Image from "../../assets/images/ibrahim5.jpg";
+import Images from "../../assets/images/cairo1.jpg";
+import CardPhotos from "../CardPhotos";
+
 import "./style.css";
 
-export default function Header() {
+export default function Header({ handleNavigationPhotos }) {
   return (
     <div className="flex_page">
       <div className="ibr_header_sides_container">
@@ -12,7 +16,7 @@ export default function Header() {
           <img src={Image} alt="ibr_image" />
         </div>
         <div className="ibr_right_side">
-          <h1 className="ibr_left_side_text"> ibrahim stokar </h1>
+          <h1 className="ibr_left_side_name"> ibrahim stokar </h1>
           <div className="ibr_right_side_text ml12">
             <Typical
               steps={[
@@ -39,6 +43,14 @@ export default function Header() {
       </div>
       <div className="ibr_animation_header_page">
         <HomeArrowAnimation />
+      </div>
+      <div>
+        <CardPhotos
+          image={Images}
+          location="Cairo,Egypt"
+          name="kareem photo"
+          description="kareem mohamed photo to camera shotting him in local place whit cam"
+        />
       </div>
     </div>
   );

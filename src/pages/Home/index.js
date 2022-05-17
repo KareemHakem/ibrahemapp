@@ -1,12 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import CardPhotos from "../../components/CardPhotos";
 
 export default function Home() {
+  const navigation = useNavigate();
+  const handleNavigationPhotos = () => {
+    navigation("/photo");
+  };
   return (
-    <div className="app__bg">
-      <Header />
-      <CardPhotos  />
+    <div className="flex_app">
+      <Header handleNavigationPhotos={handleNavigationPhotos} />
     </div>
   );
 }

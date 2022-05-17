@@ -50,7 +50,7 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.208) 0px 4px 12px;
   cursor: pointer;
   border-radius: 5px;
   padding-bottom: 4px;
@@ -63,7 +63,6 @@
   margin-top: 5px !important;
   width: 80%;
   height: 30px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,14 +70,11 @@
 
 .dropdown_item-1:hover {
   margin-top: 5px !important;
-  color:#ffffff;
-  background-color: #000;
+  color:#00adb5;
   width: 80%;
-  margin-left: 2%;
   height: 30px;
   display: flex;
   align-items: center;
-  border-radius: 5px;
 }
 
 .dropdown_item-2 {

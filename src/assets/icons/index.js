@@ -20,6 +20,7 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 // import { AiOutlineClose } from "react-icons/ai";
 
 export const Icons = {
@@ -29,8 +30,8 @@ export const Icons = {
   DeleteIcon: ({ ...props }) => <DeleteIcon {...props} />,
   EmailIcon: ({ ...props }) => <EmailIcon {...props} />,
   PersonIcon: ({ ...props }) => <PersonIcon {...props} />,
-  FormatListNumberedIcon: ({ ...props }) => (
-    <FormatListNumberedIcon {...props} />
+  LocationOnIcon: ({ ...props }) => (
+    <LocationOnIcon {...props} />
   ),
   ReportIcon: ({ ...props }) => <ReportIcon {...props} />,
   ChatIcon: ({ ...props }) => <ChatIcon {...props} />,
