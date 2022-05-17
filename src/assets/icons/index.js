@@ -20,7 +20,9 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 // import { AiOutlineClose } from "react-icons/ai";
 
 export const Icons = {
@@ -30,9 +32,7 @@ export const Icons = {
   DeleteIcon: ({ ...props }) => <DeleteIcon {...props} />,
   EmailIcon: ({ ...props }) => <EmailIcon {...props} />,
   PersonIcon: ({ ...props }) => <PersonIcon {...props} />,
-  LocationOnIcon: ({ ...props }) => (
-    <LocationOnIcon {...props} />
-  ),
+  LocationOnIcon: ({ ...props }) => <LocationOnIcon {...props} />,
   ReportIcon: ({ ...props }) => <ReportIcon {...props} />,
   ChatIcon: ({ ...props }) => <ChatIcon {...props} />,
   InstagramIcon: ({ ...props }) => <InstagramIcon {...props} />,
@@ -47,5 +47,8 @@ export const Icons = {
   ArrowLeftIcon: ({ ...props }) => <ArrowLeftIcon {...props} />,
   ArrowRightIcon: ({ ...props }) => <ArrowRightIcon {...props} />,
   MenuOpenIcon: ({ ...props }) => <MenuOpenIcon {...props} />,
-  //   AiOutlineClose: ({ ...props }) => <AiOutlineClose {...props} />,
+  KeyboardArrowLeftIcon: ({ ...props }) => <KeyboardArrowLeftIcon {...props} />,
+  KeyboardArrowRightIcon: ({ ...props }) => (
+    <KeyboardArrowRightIcon {...props} />
+  ),
 };

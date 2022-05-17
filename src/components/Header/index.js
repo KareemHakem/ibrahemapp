@@ -3,7 +3,8 @@ import Typical from "react-typical";
 
 import { HomeArrowAnimation } from "../Animation";
 import Image from "../../assets/images/ibrahim5.jpg";
-import Images from "../../assets/images/cairo1.jpg";
+import Images from "../../assets/images/pexel1.jpg";
+
 import CardPhotos from "../CardPhotos";
 
 import "./style.css";

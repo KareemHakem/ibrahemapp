@@ -1,5 +1,5 @@
 import React from "react";
-import Images from "../../assets/images/cairo1.jpg";
+import Images from "../../assets/images/pexel1.jpg";
 import PhotosContainer from "../Photos/index.js";
 
 export default function IbrPhoto() {
