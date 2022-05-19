@@ -9,7 +9,7 @@ import CardPhotos from "../CardPhotos";
 
 import "./style.css";
 
-export default function Header({ handleNavigationPhotos }) {
+export default function Header({ handleNavigationToAbout }) {
   return (
     <div className="flex_page">
       <div className="ibr_header_sides_container">
@@ -51,6 +51,7 @@ export default function Header({ handleNavigationPhotos }) {
           location="Cairo,Egypt"
           name="kareem photo"
           description="kareem mohamed photo to camera shotting him in local place whit cam"
+          handleNavigationToAbout={handleNavigationToAbout}
         />
       </div>
     </div>

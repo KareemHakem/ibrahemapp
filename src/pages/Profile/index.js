@@ -1,10 +1,10 @@
 import React from "react";
-import IbrPhoto from "../../components/IbrPhoto";
+import PhotosContainer from "../../components/Photos";
 
 export default function Profile() {
   return (
     <div>
-      <IbrPhoto />
+      <PhotosContainer />
     </div>
   );
 }

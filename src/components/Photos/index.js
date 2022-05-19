@@ -1,32 +1,50 @@
 import React from "react";
 
 import { Icons } from "../../assets/icons";
+import { photosDetail } from "../../assets/data/index";
 
-import "aos/dist/aos.css";
+import Button from "@mui/material/Button";
+
 import "./style.css";
 
-export default function PhotosContainer({
-  location,
-  description,
-  name,
-  image,
-}) {
+export default function PhotosContainer() {
   return (
-    <div>
-      <div className="ibr_card_photo_detail_container">
-        <p className="ibr_card_photo_detail_container_title">
-          Location
-          <Icons.LocationOnIcon style={{ color: "#00adb5", fontSize: 30 }} />:
-          <div style={{ marginLeft: 10 }}>{location}</div>
-        </p>
-        <div className="ibr_card_img">
-          <img src={image} alt="images" />
+    <div className="flex_page">
+      {photosDetail.map((photo) => (
+        <div key={photo.id} className="ibr_card_photo_container">
+          <img src={photo.image} alt="images" />
+          <div className="ibr_card_photo_detail_time_data">
+            <p>---</p>
+            <p>{photo.date}</p>
+            <p>---</p>
+            <p
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Icons.LocationOnIcon style={{ marginBottom: 8 }} />
+              {photo.location}
+            </p>
+          </div>
+          <div className="ibr_line_card" />
+          <div className="ibr_card_photo_detail_name">
+            <h2>{photo.name}</h2>
+            <p>{photo.description}</p>
+          </div>
+          <div className="ibr_btn_post">
+            <Button className="ibr_btn_card_Post">
+              <Icons.EditIcon style={{ color: "#00adb5", marginRight: 5 }} />
+              Edit
+            </Button>
+            <Button className="ibr_btn_card_Post">
+              <Icons.DeleteIcon style={{ color: "#FF0000", marginRight: 5 }} />
+              Delete
+            </Button>
+          </div>
         </div>
-        <div className="ibr_card_photo_detail_container_description">
-          <h1 style={{ color: "#00adb5" }}>{name}</h1>
-          <h2 style={{ color: "#000", marginTop: 20 }}>{description}</h2>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

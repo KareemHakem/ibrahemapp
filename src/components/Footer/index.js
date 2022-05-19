@@ -6,7 +6,7 @@ import Logo2 from "../../assets/images/shoterlogo.png";
 import Logo3 from "../../assets/images/pexels.png";
 import "./style.css";
 
-export default function Footer() {
+export default function Footer({ handleGoTop }) {
   return (
     <div className="ibr_footer_container">
       <div className="ibr_footer_lift_side_container">
@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
 
       <div className="ibr_footer_center_side_container">
-        <Link className="ibr_footer_logo_a" to="/">
+        <Link className="ibr_footer_logo_a" onClick={handleGoTop} to="/">
           <h3>STOKER</h3>
         </Link>
       </div>

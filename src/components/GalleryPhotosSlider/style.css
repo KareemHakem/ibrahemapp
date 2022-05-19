@@ -12,7 +12,7 @@
   align-items: flex-start;
   flex-direction: column;
   height: 447px;
-  width: 500px;
+  width: 400px;
 }
 
 .ibr_gallery_photos_left_side h3 {
@@ -88,7 +88,7 @@
 .gallery__image-icon {
   position: absolute;
   color: #fff;
-  font-size: 2rem;
+  font-size: 4rem !important;
   opacity: 0.5;
   transition: 0.5s ease;
   cursor: pointer;
@@ -121,8 +121,8 @@
 }
 
 .gallery__arrow-icon {
-  color: var(--color-golden);
-  font-size: 2rem;
+  color: #00adb5;
+  font-size: 3rem !important;
   cursor: pointer;
   background-color: var(--color-black);
   border-radius: 5px;

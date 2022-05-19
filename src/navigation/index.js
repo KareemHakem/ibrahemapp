@@ -9,6 +9,13 @@ import AdminEditProfile from "../pages/AdminEditProfile";
 import Profile from "../pages/Profile";
 
 export default function Navigation() {
+  const handleGoTop = () => {
+    window.scroll({
+      top: document.body.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <Navbar />
@@ -18,7 +25,7 @@ export default function Navigation() {
         <Route path="/photo" element={<Profile />} />
         <Route path="/adminEditProfile" element={<AdminEditProfile />} />
       </Routes>
-      <Footer />
+      <Footer handleGoTop={handleGoTop} />
     </div>
   );
 }

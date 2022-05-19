@@ -22,7 +22,7 @@ export default function CardPhotos({
   description,
   name,
   image,
-  handleNavigationPhotos,
+  handleNavigationToAbout,
 }) {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -74,8 +74,8 @@ export default function CardPhotos({
         <h2 style={{ color: "#000", marginTop: 20 }}>{description}</h2>
       </div>
       <div className="ibr_heder_btn_animation">
-        <button onClick={handleNavigationPhotos} className="btn_animation">
-          Go To All Photo
+        <button onClick={handleNavigationToAbout} className="btn_animation">
+          Go To Now Me
           <div className="animation_button">
             <HomeArrowAnimationBottom />
           </div>

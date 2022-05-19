@@ -1,11 +1,20 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import AboutInformation from "../../components/AboutInformation";
 import GalleryPhotosSlider from "../../components/GalleryPhotosSlider";
-import "./style.css"
+import "./style.css";
 
 export default function About() {
-  const handleNavigationToPhotos = () => {};
   const scrollRef = useRef(null);
+  const navigation = useNavigate();
+
+  const handleNavigationToPhotos = () => {
+    navigation("/photo");
+    window.scroll({
+      top: document.body.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   const scroll = (direction) => {
     const { current } = scrollRef;
