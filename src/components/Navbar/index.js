@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import NavbarMenu from "../NavbarMenu";
 import NavbarRightSide from "../NavbarRightSide";
@@ -6,6 +7,7 @@ import "./style.css";
 
 export default function Navbar() {
   const [displayMenu, setDisplayMenu] = useState(false);
+  const navigation = useNavigate();
 
   const handleToggle = () => {
     setDisplayMenu(!displayMenu);
@@ -13,6 +15,7 @@ export default function Navbar() {
 
   const handleClickToggle = () => {
     handleToggle();
+    navigation("/login");
   };
 
   return (

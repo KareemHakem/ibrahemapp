@@ -1,7 +1,6 @@
 import React from "react";
 
 import Avatar from "@mui/material/Avatar";
-import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
 import Image from "../../assets/images/logo1.jpeg";
