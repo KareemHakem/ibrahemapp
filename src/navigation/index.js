@@ -8,6 +8,7 @@ import About from "../pages/About";
 import AdminEditProfile from "../pages/AdminEditProfile";
 import Profile from "../pages/Profile";
 import Login from "../pages/Login";
+import SingUp from "../pages/SingUp";
 
 export default function Navigation() {
   const handleGoTop = () => {
@@ -26,6 +27,7 @@ export default function Navigation() {
         <Route path="/photo" element={<Profile />} />
         <Route path="/adminEditProfile" element={<AdminEditProfile />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/SingUp" element={<SingUp />} />
       </Routes>
       <Footer handleGoTop={handleGoTop} />
     </div>

@@ -8,7 +8,7 @@ export default function AdminMenu({ handleClickOpenEditPage }) {
       <div className=" menu_container scale-up-center">
         <ul className="dropdown_menu">
           <li className="dropdown_item-1">
-            <Link onClick={handleClickOpenEditPage} to="/login">
+            <Link onClick={handleClickOpenEditPage} to="/SingUp">
               Edit Profile
             </Link>
           </li>

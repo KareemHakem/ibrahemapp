@@ -39,7 +39,7 @@ export default function Footer({ handleGoTop }) {
 
       <div className="ibr_footer_center_side_container">
         <Link className="ibr_footer_logo_a" onClick={handleGoTop} to="/">
-          <h3>STOKER</h3>
+          <h3>STOKAR</h3>
         </Link>
       </div>
 

@@ -8,3 +8,10 @@ code {
     monospace;
 }
 
+.alert_error_danger {
+  color: red;
+  border: 1px solid red;
+  background-color: #fff;
+  height: 30px;
+  width: 300px;
+}
