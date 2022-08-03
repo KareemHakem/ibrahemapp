@@ -1,13 +1,16 @@
 import React from "react";
 import SingUpAuth from "../../components/SingUpAuth";
-import { AuthProvider } from "../../contexts/AuthContext";
 
 export default function SingUp() {
+  const handleAuthLoginUserSubmit = (value) => {
+    console.log(value);
+  };
   return (
-    <AuthProvider>
-      <div className="flex_page">
-        <SingUpAuth />
-      </div>
-    </AuthProvider>
+    <div className="flex_page">
+      <SingUpAuth
+        handleAuthLoginUserSubmit={handleAuthLoginUserSubmit}
+        // loading={loading}
+      />
+    </div>
   );
 }

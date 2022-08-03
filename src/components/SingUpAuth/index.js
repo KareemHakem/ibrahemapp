@@ -1,53 +1,52 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
-import { useAuth } from "../../contexts/AuthContext";
-import { toast } from "react-toastify";
+import { Formik, Form } from "formik";
+import { validationLoginSchema as validationSchema } from "../../utils/validationSchema";
 
-import "react-toastify/dist/ReactToastify.css";
+import { FormInput } from "../../commons/FormInput";
+import { Button } from "../../commons/Button";
+
 import "./style.css";
 
-const SingUpAuth = () => {
-  const [error, setError] = useState("");
-  const { loading, setLoading } = useState(false);
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const confirmPasswordRef = useRef();
-  //  const alert = useAlert();
-
-  const { singUp, currentUser } = useAuth();
-
-  async function handleAuthSingUpUserSubmit(e) {
-    e.preventDefault();
-
-    if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-      return setError(toast.error("kareem is bad"));
-    }
-
-    try {
-      setError("");
-      setLoading(true);
-      await singUp(emailRef.current.value, passwordRef.current.value);
-    } catch {
-      setError(toast.error("kareem is not gooood"));
-    }
-
-    setLoading(false);
-  }
+const SingUpAuth = ({ handleAuthLoginUserSubmit, loading }) => {
   return (
-    <div className="auth_SingUp_form-container">
-      {error && <h1> ERROR </h1>}
-      <h1> {currentUser && currentUser.email}</h1>
-      <div className="SingUp_form_container">
-        <input type="email" ref={emailRef} required />
-        <input type="password" ref={passwordRef} required />
-        <input type="password" ref={confirmPasswordRef} required />
-        <button
-          onClick={handleAuthSingUpUserSubmit}
-          loading={loading}
-          type="submit"
+    <div className="auth_login_form-container">
+      <div className="login_form_container">
+        <Formik
+          initialValues={{ email: "", password: "" }}
+          validationSchema={validationSchema}
+          onSubmit={handleAuthLoginUserSubmit}
         >
-          singup
-        </button>
+          {({ dirty, isValid, isSubmitting }) => (
+            <Form className="form_Login_page">
+              <h2> Hello Ibrhim Edit Your Profile </h2>
+              <div className="loginFormInput">
+                <FormInput
+                  name="email"
+                  label="Email"
+                  placeholder="Email"
+                  variant="standard"
+                  width={400}
+                />
+              </div>
+              <FormInput
+                name="password"
+                label="Password"
+                type="password"
+                placeholder="Password"
+                variant="standard"
+                width={400}
+              />
+              <Button
+                title="Login"
+                type="submit"
+                disabled={!dirty || !isValid}
+                loading={loading}
+                margin={30}
+              />
+            </Form>
+          )}
+        </Formik>
       </div>
     </div>
   );

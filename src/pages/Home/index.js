@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header";
 
+import "./style.css";
+
 export default function Home() {
   const navigation = useNavigate();
 
@@ -18,6 +20,14 @@ export default function Home() {
   return (
     <div className="flex_app">
       <Header handleNavigationToAbout={handleNavigationToAbout} />
+      {/* <div className="btn_hover">
+        <a
+          className="a_hover"
+          href="https://github.com/KareemHakem?tab=repositories"
+        >
+          download
+        </a>
+      </div> */}
     </div>
   );
 }
