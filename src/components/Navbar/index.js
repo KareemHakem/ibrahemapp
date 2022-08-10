@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
+
+import { Button } from "@mui/material";
+
 import NavbarMenu from "../NavbarMenu";
 import NavbarRightSide from "../NavbarRightSide";
+
 import "./style.css";
 
-export default function Navbar() {
+export default function Navbar({ logout, user }) {
   const [displayMenu, setDisplayMenu] = useState(false);
-  const navigation = useNavigate();
 
   const handleToggle = () => {
     setDisplayMenu(!displayMenu);
-  };
-
-  const handleClickToggle = () => {
-    handleToggle();
-    navigation("/login");
   };
 
   return (
@@ -37,12 +35,18 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-        <NavbarRightSide handleOpenMenu={handleToggle} />
+        {user?.email ? (
+          <div>
+            <Button className="navbar-btn-user" onClick={handleToggle}>
+              {user?.email}
+            </Button>
+          </div>
+        ) : (
+          <NavbarRightSide />
+        )}
       </div>
       <div className="ibr_menu_display">
-        {displayMenu && (
-          <NavbarMenu handleClickOpenEditPage={handleClickToggle} />
-        )}
+        {displayMenu && <NavbarMenu logout={logout} />}
       </div>
     </div>
   );

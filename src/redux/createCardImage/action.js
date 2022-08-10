@@ -6,7 +6,6 @@ export const getCard = () => async (dispatch) => {
   try {
     const { data } = await axios.get(`/posts`);
     dispatch({ type: type.GET_CARD_IMAGE_SUCCESS, payload: data });
-    console.log(data, "data post");
   } catch (err) {
     dispatch({ type: type.GET_CARD_IMAGE_ERROR, payload: err });
   }

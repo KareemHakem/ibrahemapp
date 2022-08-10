@@ -8,6 +8,7 @@ import Images from "../../assets/images/pexel1.jpg";
 import CardPhotos from "../CardPhotos";
 
 import "./style.css";
+import { inferTo } from "react-spring";
 
 export default function Header({ handleNavigationToAbout }) {
   return (
@@ -22,9 +23,8 @@ export default function Header({ handleNavigationToAbout }) {
             <Typical
               steps={[
                 "I am get all your happy moments and frozen it in photo",
-                8000,
+                9000,
               ]}
-              loop={Infinity}
               wrapper="h1"
             />
             <div className="ibr_right_side_small_text">
@@ -49,8 +49,8 @@ export default function Header({ handleNavigationToAbout }) {
         <CardPhotos
           image={Images}
           location="Cairo,Egypt"
-          name="kareem photo"
-          description="kareem mohamed photo to camera shotting him in local place whit cam"
+          name="Ibrahim photo"
+          description="Ibrahim Omar photo to camera shotting him in local place whit cam"
           handleNavigationToAbout={handleNavigationToAbout}
         />
       </div>

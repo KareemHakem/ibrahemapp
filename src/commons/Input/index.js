@@ -7,6 +7,7 @@ export default function Input({
   label,
   width,
   margin,
+  marginTop,
   padding,
   ...otherProps
 }) {
@@ -14,7 +15,7 @@ export default function Input({
     <Box
       component="form"
       sx={{
-        "& > :not(style)": { margin, width, padding },
+        "& > :not(style)": { margin, width, padding, marginTop },
       }}
       noValidate
       autoComplete="off"

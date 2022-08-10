@@ -79,3 +79,7 @@
   position: fixed;
   color: #00adb5;
 }
+
+.navbar-btn-user {
+  color: #00adb5 !important;
+}

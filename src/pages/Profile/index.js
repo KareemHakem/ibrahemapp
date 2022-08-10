@@ -1,29 +1,102 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getCard } from "../../redux/createCardImage/action";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth, db } from "../../firebase-config";
+import CardDataService from "../../services/cardServices";
+
 import PhotosContainer from "../../components/Photos";
+import AuthModal from "../../components/AuthModal";
+import { Button } from "@mui/material";
+import { deleteDoc, doc } from "firebase/firestore";
 
-import Loading from "../../commons/Loading";
-import Error from "../../commons/Error";
+export default function Profile({ user, cards }) {
+  const [openModal, setOpenModal] = useState(false);
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
 
-export default function Profile() {
-  const { data, error, loading } = useSelector((state) => state.posts);
-  const dispatch = useDispatch();
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
 
-  useEffect(() => {
-    dispatch(getCard());
-  }, [dispatch]);
+  console.log(user);
 
-  console.log(data, "data");
+  const navigation = useNavigate();
 
-  if (loading) return <Loading />;
-  if (error) return <Error />;
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      console.log(user);
+      setOpenModal(!openModal);
+    } catch (error) {
+      console(error);
+    }
+  };
+
+  const login = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      console.log(user);
+      setOpenModal(!openModal);
+    } catch (error) {
+      console(error);
+    }
+  };
+
+  const handleNavigationCreateCard = () => {
+    user ? navigation("/createCard") : setOpenModal(true);
+  };
+
+  const handleDeleteCard = async (id) => {
+    const cardDoc = doc(db, "cards", id);
+    user ? await deleteDoc(cardDoc) : setOpenModal(true);
+  };
+
+  const handToggleModal = () => setOpenModal(!openModal);
 
   return (
     <div>
-      {data.map((card) => (
-        <PhotosContainer key={card.id} card={card} />
-      ))}
+      {user ? (
+        <div className="Create-card">
+          <h2> To create New Post Click </h2>
+          <Button onClick={handleNavigationCreateCard} className="create-btn">
+            Create Card
+          </Button>
+        </div>
+      ) : null}
+
+      <div>
+        {cards?.map((card) => (
+          <PhotosContainer
+            key={card.id}
+            card={card}
+            handleDeleteCard={handleDeleteCard}
+            user={user}
+            setOpenModal={setOpenModal}
+          />
+        ))}
+      </div>
+
+      <AuthModal
+        setRegisterEmail={setRegisterEmail}
+        setRegisterPassword={setRegisterPassword}
+        setLoginEmail={setLoginEmail}
+        setLoginPassword={setLoginPassword}
+        handleCloseModal={handToggleModal}
+        openModal={openModal}
+        register={register}
+        login={login}
+      />
     </div>
   );
 }

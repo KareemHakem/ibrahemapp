@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^13.2.1",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
-    "firebase": "^9.8.1",
+    "firebase": "^9.9.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.3",
     "react": "^18.1.0",

@@ -4,10 +4,10 @@ import AdminMenu from "../AdminMenu";
 
 import "./style.css";
 
-export default function NavbarMenu({ handleClickOpenEditPage }) {
+export default function NavbarMenu({ logout }) {
   return (
     <div>
-      <AdminMenu handleClickOpenEditPage={handleClickOpenEditPage} />
+      <AdminMenu logout={logout} />
     </div>
   );
 }

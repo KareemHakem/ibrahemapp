@@ -7,6 +7,7 @@ export default function GalleryPhotosSlider({
   handleNavigationToPhotos,
   scrollRef,
   scroll,
+  cards,
 }) {
   return (
     <div className="ibr_gallery_photos_container">
@@ -24,7 +25,7 @@ export default function GalleryPhotosSlider({
 
       <div className="ibr__gallery-images">
         <div className="ibr__gallery-images_container" ref={scrollRef}>
-          {Images.map((image, index) => (
+          {cards.map((image, index) => (
             <div
               className="ibr__gallery-images_card flex__center"
               key={`gallery_image-${index + 1}`}

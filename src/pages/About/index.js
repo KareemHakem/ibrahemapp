@@ -4,7 +4,7 @@ import AboutInformation from "../../components/AboutInformation";
 import GalleryPhotosSlider from "../../components/GalleryPhotosSlider";
 import "./style.css";
 
-export default function About() {
+export default function About({ cards }) {
   const scrollRef = useRef(null);
   const navigation = useNavigate();
 
@@ -31,6 +31,7 @@ export default function About() {
         handleNavigationToPhotos={handleNavigationToPhotos}
         scroll={scroll}
         scrollRef={scrollRef}
+        cards={cards}
       />
     </div>
   );

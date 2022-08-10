@@ -1,9 +1,29 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
+.Create-card {
+  height: 50px;
+  width: 420px;
+  background-color: #00adb5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
 
+.Create-card h2 {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif !important;
+  margin-left: 10px;
+}
 
-
+.create-btn {
+  color: #fff !important;
+  font-family: "Josefin Sans", sans-serif !important;
+  margin-left: 10px !important;
+  margin-top: 3px !important;
+}
