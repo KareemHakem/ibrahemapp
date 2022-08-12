@@ -27,6 +27,7 @@ export default function About({ cards }) {
   return (
     <div className="ibr_about_page">
       <AboutInformation />
+
       <GalleryPhotosSlider
         handleNavigationToPhotos={handleNavigationToPhotos}
         scroll={scroll}

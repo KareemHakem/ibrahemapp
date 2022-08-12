@@ -1,6 +1,7 @@
 import React from "react";
+
 import { Icons } from "../../assets/icons";
-import { Images } from "../../assets/data/index";
+
 import "./style.css";
 
 export default function GalleryPhotosSlider({
@@ -22,29 +23,32 @@ export default function GalleryPhotosSlider({
           To All Photos
         </button>
       </div>
-
-      <div className="ibr__gallery-images">
-        <div className="ibr__gallery-images_container" ref={scrollRef}>
-          {cards.map((image, index) => (
-            <div
-              className="ibr__gallery-images_card flex__center"
-              key={`gallery_image-${index + 1}`}
-            >
-              <img src={image.image} alt="images" />
-            </div>
-          ))}
+      {cards.length === 0 ? (
+        <div className="ibr__gallery-images"></div>
+      ) : (
+        <div className="ibr__gallery-images">
+          <div className="ibr__gallery-images_container" ref={scrollRef}>
+            {cards.map((image, index) => (
+              <div
+                className="ibr__gallery-images_card flex__center"
+                key={`gallery_image-${index + 1}`}
+              >
+                <img src={image.image} alt="images" />
+              </div>
+            ))}
+          </div>
+          <div className="ibr__gallery-images_arrows">
+            <Icons.KeyboardArrowLeftIcon
+              className="gallery__arrow-icon"
+              onClick={() => scroll("left")}
+            />
+            <Icons.KeyboardArrowRightIcon
+              className="gallery__arrow-icon"
+              onClick={() => scroll("right")}
+            />
+          </div>
         </div>
-        <div className="ibr__gallery-images_arrows">
-          <Icons.KeyboardArrowLeftIcon
-            className="gallery__arrow-icon"
-            onClick={() => scroll("left")}
-          />
-          <Icons.KeyboardArrowRightIcon
-            className="gallery__arrow-icon"
-            onClick={() => scroll("right")}
-          />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

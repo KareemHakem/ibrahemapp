@@ -16,16 +16,14 @@ export default function AboutInformation() {
 
         <div className="ibr_text_description">
           <p>
-            Module build failed (from
-            ./node_modules/babel-loader/lib/index.js)SyntaxError: Unexpected
-            token (12:22)
+            Confident and dedicated photographer with experience in both
+            professional and freelance photography
           </p>
         </div>
         <div className="ibr_text_description">
           <p>
-            Module build failed (from
-            ./node_modules/babel-loader/lib/index.js)SyntaxError: Unexpected
-            token (12:22)
+            Holds nearly 5 years of working experience with great variety in
+            order to tackle any photography job quickly and effectively
           </p>
         </div>
       </div>

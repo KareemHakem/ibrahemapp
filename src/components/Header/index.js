@@ -8,7 +8,7 @@ import Images from "../../assets/images/pexel1.jpg";
 import CardPhotos from "../CardPhotos";
 
 import "./style.css";
-import { inferTo } from "react-spring";
+
 
 export default function Header({ handleNavigationToAbout }) {
   return (
